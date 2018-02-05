@@ -1,0 +1,148 @@
+Paradata 
+
+Regard 3d
+
+Here is a chart showing the progress I went through when trying the various setting combinations. In order to continue to form the dense point cloud which can take hours to make there must be atlas 90% of the cameras found. Cameras refers to pictures that can be used to form the match and the number of cameras is number of pictures within the set. 
+
+Picture set 1
+
+Matche0: default setting 
+Conclusion: glare created distortion. New photo set with softer light.
+
+Picture set 2
+Matche0: Sensitivity: minimal 
+	    Kmr: ultra
+	    Kd: classical A-KAZE
+	    Matching algorithm: FLANN
+ 	    Camera Model: pinhole
+Runtime  50 min and it looks bad 
+
+Triangulation0: 
+Global default settings results
+ Cameras: 128/130
+Number of points: 14492
+Runt time 47 min
+Conclusion: unable to continue to form  dense point cloud
+
+Match1: key point sensitivity: normal
+		Kew point matching ratio: high
+		Camera model: pinhole browser 2
+		Matching algorithm: KgraphPrecise
+		Key point detector: Classical A-KAZE
+runtime 9hrs 57min
+
+Triangulation1: 
+Global default setting results
+ERROR
+
+
+Picture set 3
+
+Match0: key point sensitivity: normal
+		Kew point matching ratio: high
+		Camera model: pinhole
+		Matching algorithm: FLANN
+		Key point detector: Classical A-KAZE
+Runtime 5 min 18 sec
+
+Match1: key point sensitivity: min
+		Kew point matching ratio: ultra
+		Camera model: pinhole
+		Matching algorithm: KgraphFast
+		Key point detector: Classical A-KAZE
+Runtime 4min 21 sec
+
+Triangulation: 
+Default setting results
+Cameras: 3/19
+Number of points: 577
+
+Conclusion: unable to continue to form  dense point cloud
+
+
+Picture set 4
+
+Match0: default settings 
+Run time: 7 min 45 sec
+
+Triangulation 0-5:
+Incremental= error 
+Note: incremental does not work at all for me only the global settings
+
+0. Global. L2. Softl1. = 13/36 cameras, 4142 points
+1.Global. L2. L2. = 13/36 cameras, 4142 points
+2.Global. L2. L1.= 13/36 cameras, 4142 points
+3.Global. L1. Softl1= 13/36 cameras, 4142 points
+4.Global. L1. L2.= 13/36 cameras, 4142 points
+5.Global. L1. L2.= 13/36 cameras, 4142 points
+
+Conclusion: unable to continue to form  dense point cloud
+
+Matches1: key point sensitivity: normal
+		Kew point matching ratio: normal
+		Camera model: pinhole
+		Matching algorithm:FLANN
+		Key point detector: Classical A-KAZE
+Runtime 7min 46 sec
+
+Triangulation 0-2:
+
+0.Global. L2. Softl1. = 14/36 cameras, 4227 points
+1.Global. L2. L2. = 14/36 cameras, 4227 points
+2.Global. L2. L1. = 14/36 cameras, 4227 points
+
+Conclusion: triangulation does not have a significant effect, unable to continue to form  dense point cloud
+
+Matche2: key point sensitivity: normal
+		Kew point matching ratio: higher
+		Camera model: pinhole
+		Matching algorithm:FLANN
+		Key point detector: Classical A-KAZE
+Runtime 7min 14sec
+
+Triangulation0:
+Global. L2. Softl1. = 21/36 cameras, 7552 points
+
+Conclusion: does not form a significant enough spare cloud point
+
+Match3: key point sensitivity: normal
+		Kew point matching ratio: higher
+		Camera model: pinhole
+		Matching algorithm:FLANN
+		Key point detector: Classical A-KAZE
+Runtime 7 min 57 sec
+ 
+
+
+Photoshoot 
+
+This is a record of the camera settings and whatever editing that was done to the photos before they were put into regard3d. Regarding matters such as light please refer to the diagrams found in my open note book here.
+
+Picture set 1.
+Camera mode: no flash, RAW processing 
+Edits made: none
+Cameras: 45
+Errors found: light is to harsh, to much glare, software unable to match close ups.
+Conclusion: soften the lighting, take more pictures on several angels, no close ups.
+
+Picture set 2.
+Camera mode: action, RAW processing 
+Edits made: none
+Cameras: 131
+Errors found: the environment created to much noise, glare distortion, takes an average of 5 hours to process matches and 8+ hours to process triangulation.
+Conclusion: fix the glare and find a way to improve the point triangulation, get rid of any background environment.
+
+Picture set 3.
+Camera more: portrait, RAWfine
+Edits made: enhanced in Photos, reduced brightness, covered the tool box in dots before taking photos
+Cameras: 19 
+Errors found: the focal point changed making almost 50% of the photos useless, still has glare, the fabric created noise, not enough photos.
+Conclusion: get rid of the glare, no background, more soft light.
+
+Picture set 4.
+Camera mode: no flash, RAWfine, used the timer 
+Edits: enhanced in Photos, dots on the box before taking photos, dusted with powder.
+Camera: 39
+Errors: same errors, only 1 surface generated. 
+Conclusion: failure
+
